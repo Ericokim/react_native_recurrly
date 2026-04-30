@@ -1,10 +1,16 @@
 import "@/global.css";
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { styled } from "nativewind";
+import { Text } from "react-native";
+import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
 
+const SafeAreaView = styled(RNSafeAreaView);
+
+/* This component is responsible for rendering the UI of the application. Here's
+a breakdown of what the component is doing: */
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-background">
+    <SafeAreaView className="flex-1 bg-background p-5">
       <Text className="text-xl font-bold text-success">
         Welcome to Nativewind!
       </Text>
@@ -41,6 +47,6 @@ export default function App() {
       >
         Claude Max Subscriptions
       </Link>
-    </View>
+    </SafeAreaView>
   );
 }
